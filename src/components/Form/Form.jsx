@@ -29,6 +29,7 @@ const Form = () => {
           onChange={changeUser}
         />
         <select name="gender" onChange={changeUser}>
+          <option value="">Choose gender</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select>
