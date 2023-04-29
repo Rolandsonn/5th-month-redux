@@ -1,15 +1,16 @@
 import styles from "./Form.module.css";
 import { useDispatch } from "react-redux";
+import { changeName, changeAge, changeGender } from "../../store/actions";
 const Form = () => {
   const dispatch = useDispatch();
 
   const changeUser = (e) => {
     if (e.target.name === "name") {
-      dispatch({ type: "CHANGE_NAME", payload: e.target.value });
+      dispatch(changeName(e.target.value));
     } else if (e.target.name === "age") {
-      dispatch({ type: "CHANGE_AGE", payload: e.target.value });
+      dispatch(changeAge(e.target.value));
     } else {
-      dispatch({ type: "CHANGE_GENDER", payload: e.target.value });
+      dispatch(changeGender(e.target.value));
     }
   };
 

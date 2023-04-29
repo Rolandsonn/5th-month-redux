@@ -1,3 +1,4 @@
+import { CHANGE_NAME, CHANGE_AGE, CHANGE_GENDER } from "./types";
 const initialState = {
   user: {
     name: "",
@@ -7,11 +8,11 @@ const initialState = {
 };
 
 export const userReducer = (state = initialState, action) => {
-  if (action.type === "CHANGE_NAME") {
+  if (action.type === CHANGE_NAME) {
     return { ...state, name: action.payload };
-  } else if (action.type === "CHANGE_AGE") {
+  } else if (action.type === CHANGE_AGE) {
     return { ...state, age: action.payload };
-  } else if (action.type === "CHANGE_GENDER") {
+  } else if (action.type === CHANGE_GENDER) {
     return { ...state, gender: action.payload };
   }
   return state;

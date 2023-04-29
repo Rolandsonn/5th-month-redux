@@ -1,19 +1,15 @@
-import { useSelector } from "react-redux";
 import Form from "./components/Form";
 import "./App.css";
+import Counter from "./components/Counter";
+import User from "./components/User/User";
 function App() {
-  const { name, age, gender } = useSelector((state) => state);
-
   return (
     <>
       <div className="wrapper">
         <Form />
-        <div className="inner">
-          <h2>Name: {name}</h2>
-          <p>Age: {age}</p>
-          <p>Gender: {gender}</p>
-        </div>
+        <User />
       </div>
+      <Counter />
     </>
   );
 }
